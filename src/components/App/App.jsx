@@ -1,17 +1,19 @@
+import { HomePage } from "components/Pages/HomePage/HomePage";
+import { LoginPage } from "components/Pages/LoginPage/LoginPage";
+import { RegisterPage } from "components/Pages/RegisterPage/RegisterPage";
+import { ShoppingList } from "components/Pages/ShopList/ShoppingList";
+import { Route, Routes } from "react-router-dom";
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      React homework template
-    </div>
+    <>
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/register" element={<RegisterPage />}></Route>
+        <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="/shopping-list" element={<ShoppingList/>}></Route>
+      </Routes>
+    </>
   );
 };
 
